@@ -257,9 +257,9 @@ const MainPage = () => {
                     Now Log In to view more.
                   </p>
                   <Link to="/login">
-                    <button className="bg-darkBlue mt-6 font-semibold text-base text-white px-6 py-3 rounded-xl flex items-center justify-center gap-1 shadow-xl hover:bg-blue-800 hover:cursor-pointer transition-hover duration-300">
+                    <span className="bg-darkBlue mt-6 font-semibold text-base text-white px-6 py-3 rounded-xl flex items-center justify-center gap-1 shadow-xl hover:bg-blue-800 hover:cursor-pointer transition-hover duration-300">
                       Log In
-                    </button>
+                    </span>
                   </Link>
                 </div>
               ) : (
