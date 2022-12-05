@@ -15,6 +15,7 @@ const MainPage = () => {
 
   // ==================== Error Messages ====================
   let [errMsg, setErrorMsg] = useState(false);
+  let [errMsgTwo, setErrorMsgTwo] = useState(false);
 
   let EmailValidation = (email) => {
     return String(email)
@@ -90,12 +91,12 @@ const MainPage = () => {
     submitSignUpBtn.addEventListener("click", (e) => {
       e.preventDefault();
       if (password === "") {
-        setErrorMsg("Password is required!");
+        setErrorMsgTwo("Password is required!");
       } else {
         setSuccessMsgThree(
           `Congratulations dear ${firstName} ${lastName}. Your Account has been created successfully according below mentioned details...`
         );
-        setErrorMsg(false);
+        setErrorMsgTwo(false);
       }
     });
   }, [firstName, lastName, phoneNumber, email, password]);
@@ -268,9 +269,9 @@ const MainPage = () => {
                     <h4 className="font-semibold text-xl">SignUp Form</h4>
                   </div>
                   <div className="w-[70%] flex flex-col items-center gap-6">
-                    {errMsg && (
+                    {errMsgTwo && (
                       <p className="text-sm text-white font-semibold tracking-[1.5px] rounded-md bg-red-600 w-full text-center py-[2px] animate-bounce">
-                        {errMsg}
+                        {errMsgTwo}
                       </p>
                     )}
                     <input
